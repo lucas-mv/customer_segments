@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12157,6 +12157,7 @@ div#notebook {
 </tbody>
 </table>
 <p>This sample could represent a small grocery store that specializes mostly on grocery items and on house utilities like detergents than on fresh items.</p>
+<p>This sample is closest to the 25% average percentile.</p>
 <h3 id="Sample-1:">Sample 1:<a class="anchor-link" href="#Sample-1:">&#182;</a></h3><p>Sample index: 150</p>
 <table>
 <thead><tr>
@@ -12180,6 +12181,7 @@ div#notebook {
 </tbody>
 </table>
 <p>This sample looks a lot like a store that sells mostly fresh items, like a fruit market.</p>
+<p>This sample is closest to the 75% average percentile.</p>
 <h3 id="Sample-2:">Sample 2:<a class="anchor-link" href="#Sample-2:">&#182;</a></h3><p>Sample index: 90</p>
 <table>
 <thead><tr>
@@ -12203,6 +12205,7 @@ div#notebook {
 </tbody>
 </table>
 <p>This sample probably comes from a store that sells mostly fresh and frozen food items, this could be a takeout cafè that sells some frozen items.</p>
+<p>This sample is closest to the 50% average percentile.</p>
 <h3 id="Comparing-the-samples:">Comparing the samples:<a class="anchor-link" href="#Comparing-the-samples:">&#182;</a></h3><p>The samples differ from the average values and that does provide a lot of context when analysing what kind of customer or establishments they might be. Having the base average values gives me a nice base to infer and make conclusions about those things.</p>
 
 </div>
@@ -12229,7 +12232,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span> 
@@ -12316,7 +12319,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -12379,7 +12382,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -12396,13 +12399,13 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x170e91fab38&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2b822d0a8d0&gt;</pre>
 </div>
 
 </div>
@@ -12432,13 +12435,13 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p>The features are all normally distributed and most of the data correlations seem to lie on the lower left end of the diagrams, not having a very specific behaviour, except for the very correlated features (answer below) which seem to have a very linear behaviour. There are not many oulier points, the outliers can be considered noise in this case.</p>
+<li><p>The features are not normally distributed as they are positively skewed and most of the data correlations seem to lie on the lower left end of the diagrams, not having a very specific behaviour, except for the very correlated features (answer below) which seem to have a very linear behaviour. There are not many oulier points, the outliers can be considered noise in this case.</p>
 </li>
 <li><p>Groceries ans Detergents_Paper seem to be very much correlated, the other most correlated features are Milk and Detergents_Paper and Milk and Groceries.</p>
 </li>
 <li><p>This confirms the suspicion, since Groceries is strongly correlated to two different features.</p>
 </li>
-<li><p>The features seem to be all normally distributed, but the distribution is not centered around the bell curve.</p>
+<li><p>The features are not normally distributed as they are positively skewed.</p>
 </li>
 </ul>
 
@@ -12470,7 +12473,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -12534,7 +12537,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -12641,7 +12644,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -13443,11 +13446,11 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p>The points 154, 128, 66, 75 are all outliers on multiple features.</p>
+<li><p>The points 154, 128, 66, 65, 75 are all outliers on multiple features.</p>
 </li>
 <li><p>It would be the best if these were removed, since this would cause some trouble to K-means, since it is an algorith that gets affected very by outliers.</p>
 </li>
-<li><p>The points 154, 128, 66, 75 were added to the <code>outliers</code> list since they show up on multiple features as outliers.</p>
+<li><p>The points 154, 128, 66, 65, 75 were added to the <code>outliers</code> list since they show up on multiple features as outliers.</p>
 </li>
 </ul>
 
@@ -13479,7 +13482,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
@@ -13545,10 +13548,10 @@ Once you have performed this implementation, the dataset will be stored in the v
 <li>The first two components' explained variance is 0.7093</li>
 <li>The first four components' explained variance is 0.9319</li>
 <li>Most of the variance is explained in the first two dimensions, which represent the most common customer behaviours in the store. The first four dimentions are discussed below<ul>
-<li>The first dimension explains the Detergents_Paper, Milk and Groceries features and probably represent a day-to-day customer getting its basic needs from the store.</li>
-<li>The second one explains the Delicatessen, Frozen and mostly Fresh features and most likely represents a customer looking for food supplies.</li>
-<li>The third dimension explains mostly the Fresh and Delicatessen features, probably indicating a customer buying something to takeout and eat as soon as possible.</li>
-<li>The fourth dimension is mostly related to the Frozen feature, which probably indicated a customer only looking for frozen food items at the store</li>
+<li>The first dimension explains the Detergents_Paper, Milk and Groceries features and probably represent a day-to-day customer getting its basic needs from the store, which is reinforced by the oposition of the direction of those features to the Frozen and Fresh features.</li>
+<li>The second one explains the Delicatessen, Frozen and mostly Fresh features and most likely represents a customer looking for food supplies. In this case all of the features are in the same direction.</li>
+<li>The third dimension explains mostly the Fresh and Delicatessen features, probably indicating a customer buying something to takeout and eat as soon as possible, given that the customer buys either one of those because of the oposing direction of those said features.</li>
+<li>The fourth dimension is mostly related to the Frozen feature, which probably indicated a customer only looking for frozen food items at the store and at other less frequent times Milk.</li>
 </ul>
 </li>
 </ul>
@@ -13567,7 +13570,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -13671,7 +13674,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -13704,7 +13707,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -13787,7 +13790,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -13804,13 +13807,13 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x170e86042e8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2b8237170b8&gt;</pre>
 </div>
 
 </div>
@@ -13903,7 +13906,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">silhouette_score</span>
@@ -15276,7 +15279,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -15490,6 +15493,7 @@ Sample point 2 predicted to be in Cluster 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>The predictions for the sample points are correct and make sense with the previous data clustering analysis.</p>
+<p>In comparison to the answers of questions 8 and 1 the samples have fallen in the same cluster location and the interpretation of the results as previously predicted.</p>
 
 </div>
 </div>
@@ -15531,6 +15535,7 @@ Sample point 2 predicted to be in Cluster 1
 <p><strong>Answer:</strong></p>
 <p>Users in <code>Segment 1</code> who look mostly for fresh food items would probably react negatively to this, since they won't get the items as fresh as they would want them to be.</p>
 <p>The best course of action would be to make this change for customers in <code>Segment 0</code>, who are looking for day-to-day items that don't require much freshness in their products.</p>
+<p>Our A/B test could be to change the delivery service from 5 days a week to 4 days a week for a small number of custumers in <code>Segment 0</code> and see if they react positively or negatively to this, and then do the same A/B test but changing for 3 days a week, if they have reacted positively to the previous test.</p>
 
 </div>
 </div>
